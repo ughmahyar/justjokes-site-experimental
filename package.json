@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "description": "just jokes: one-page site — local dev preview",
   "scripts": {
-    "dev": "browser-sync start --server . --port 8080 --host 0.0.0.0 --no-open --watch --files index.html,assets/**"
+    "dev": "browser-sync start --server . --port 8080 --host 0.0.0.0 --no-open --watch --files index.html,assets/**",
+    "preview": "browser-sync start --server . --port 8080 --host 0.0.0.0 --no-open --no-ui --watch --files index.html,assets/**,device-preview.html --ghostMode false"
   },
   "devDependencies": {
     "browser-sync": "^3.0.3"

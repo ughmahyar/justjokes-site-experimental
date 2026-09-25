@@ -8,5 +8,6 @@ worker.js
 node_modules
 tools
 device-preview.html
+DESIGN.md
 package.json
 package-lock.json
