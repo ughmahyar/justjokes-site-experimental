@@ -1,16 +1,19 @@
 User-agent: *
 Allow: /
 
-# AI answer engines and assistants are welcome to crawl and cite this site.
+# AI training crawlers follow the Cloudflare managed rules served at the edge
+# (Disallow wins on merge), so this file never contradicts them.
 User-agent: GPTBot
-Allow: /
+Disallow: /
 User-agent: ClaudeBot
-Allow: /
-User-agent: PerplexityBot
-Allow: /
+Disallow: /
 User-agent: Google-Extended
-Allow: /
+Disallow: /
 User-agent: Applebot-Extended
+Disallow: /
+# PerplexityBot is not blocked by the Cloudflare managed rules, so it stays
+# welcome to crawl and cite the site.
+User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://justjokesmy.com/sitemap.xml
