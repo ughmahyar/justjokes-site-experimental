@@ -1,0 +1,15 @@
+# system junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+# local backups and working files never get uploaded
+*.backup*
+*.bak
+/originals/
+/tmp/
+.wrangler/
+# local dev tooling
+node_modules/
+package-lock.json
+device-preview.html

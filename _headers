@@ -1,0 +1,4 @@
+# Preview only: keep every page, image and video out of search engines.
+# Remove this block at launch.
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive
