@@ -1,4 +1,4 @@
-// Cloudflare deploy settings for the preview link.
+// Cloudflare deploy settings for the live site (justjokesmy.com).
 // Deploy: npx wrangler@4 deploy   (run from this folder)
 {
   "name": "justjokes-preview",

@@ -27,6 +27,7 @@ python3 -m http.server 8000
 then visit http://localhost:8000
 
 
-## Preview link
+## Deploy
 
-https://justjokes-preview.justjokes-ughmahyar.workers.dev (hidden from search engines). It is refreshed automatically after every change.
+Live at https://justjokesmy.com. Deploy with `npx wrangler@4 deploy` from this folder
+(see `wrangler.jsonc`). Only files not listed in `.assetsignore` are uploaded.
