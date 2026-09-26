@@ -11,3 +11,15 @@ device-preview.html
 DESIGN.md
 package.json
 package-lock.json
+# never upload local secrets, backups, raw originals or editor/AI tooling files
+.dev.vars*
+.env*
+*.backup*
+*.bak
+originals
+tmp
+.github
+.claude
+CLAUDE.md
+*.md
+.DS_Store

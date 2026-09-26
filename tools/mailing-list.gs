@@ -24,7 +24,7 @@ function doPost(e) {
     const last = sh.getLastRow();
     const existing = last > 1 ? sh.getRange(2, 2, last - 1, 1).getValues().flat().map(String) : [];
     if (existing.indexOf(email) === -1 && existing.indexOf("'" + email) === -1) {
-      sh.appendRow([new Date(), safe(email), safe(wa), safe(String(p.source || 'website').slice(0, 60))]);
+      sh.appendRow([new Date(), safe(email), safe(wa), safe(String(p.source || 'website').trim().slice(0, 60))]);
       if (NOTIFY_EMAIL) MailApp.sendEmail(NOTIFY_EMAIL, 'New just jokes: signup', email + (wa ? '\nWhatsApp: ' + wa : ''));
     }
   } finally {
@@ -34,5 +34,5 @@ function doPost(e) {
 }
 
 // stop anything that looks like a spreadsheet formula from being run
-function safe(s) { return /^[=+\-@]/.test(s) ? "'" + s : s; }
+function safe(s) { return /^[=+\-@\t\r]/.test(s) ? "'" + s : s; }
 function json(o) { return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON); }
